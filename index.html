@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f6">
+  <meta name="description" content="A little birthday surprise made especially for Sreya.">
+  <title>For Sreya ♡ | Birthday Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <div id="confetti-layer" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Back to top">sreya <span>♡</span></a>
+    <button class="music-toggle" id="musicToggle" aria-pressed="false" title="Toggle birthday music">♫ <span>Music</span></button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="eyebrow"><span class="tiny-heart">♥</span> A LITTLE BIRTHDAY MAGIC</div>
+      <h1>Hey, <em>Sreya</em>!<br><span class="title-line">Today is all about you.</span></h1>
+      <p class="hero-copy">A tiny corner of the internet, made with a lot of affection, a little chaos, and one very special birthday girl in mind. 🎀</p>
+      <button class="primary-button" id="beginButton">Open your surprise <span>↗</span></button>
+      <div class="hero-sticker sticker-star">✦</div><div class="hero-sticker sticker-bow">🎀</div>
+      <div class="scroll-note">SCROLL FOR THE MAGIC <span>↓</span></div>
+    </section>
+
+    <section class="section intro reveal" id="little-note">
+      <div class="section-kicker">01 / A NOTE FOR YOU</div>
+      <div class="note-card">
+        <span class="note-sparkle">✧</span>
+        <p class="handwritten">Some people make ordinary days feel a little brighter.</p>
+        <p class="muted">So here's a small reminder that you deserve the biggest smiles, the sweetest memories, and a birthday full of good things. Happy birthday, Sreya! 💗</p>
+        <div class="note-signature">— your friend, always cheering for you</div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="gallery">
+      <div class="section-kicker">02 / LITTLE MOMENTS</div>
+      <div class="section-heading">
+        <div><h2>A gallery of <em>you</em></h2><p>Swap these placeholders for your favourite photos together.</p></div>
+        <span class="heading-doodle">♡</span>
+      </div>
+      <div class="gallery-grid">
+        <figure class="photo-card tilt-left"><img src="photos/photo1.jpg" alt="Replace with a favourite photo of Sreya" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>📸</span><b>Photo one</b><small>A favourite memory</small></div><figcaption>Certified sunshine ☀️</figcaption></figure>
+        <figure class="photo-card tilt-right photo-tall"><img src="photos/photo2.jpg" alt="Replace with another favourite photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>🌷</span><b>Photo two</b><small>One for the scrapbook</small></div><figcaption>Main character energy ✨</figcaption></figure>
+        <figure class="photo-card tilt-right"><img src="photos/photo3.jpg" alt="Replace with a funny photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>🫶</span><b>Photo three</b><small>The silly one</small></div><figcaption>Zero normal moments 😂</figcaption></figure>
+      </div>
+      <p class="micro-copy">Your photos stay in your website folder — nothing gets uploaded by this page itself.</p>
+    </section>
+
+    <section class="section reveal" id="quiz">
+      <div class="section-kicker">03 / VERY IMPORTANT RESEARCH</div>
+      <div class="quiz-panel">
+        <div class="quiz-top"><span>THE SREYA QUIZ</span><span>✦ just for fun ✦</span></div>
+        <h2 id="quizQuestion">What's Sreya's official birthday superpower?</h2>
+        <p class="muted" id="quizHint">Choose wisely. A totally unbiased committee is watching.</p>
+        <div class="quiz-options" id="quizOptions">
+          <button class="quiz-option" data-answer="0">Making people laugh at the worst time</button>
+          <button class="quiz-option" data-answer="1">Being cute and pretending it's accidental</button>
+          <button class="quiz-option" data-answer="2">Stealing snacks without evidence</button>
+        </div>
+        <div class="quiz-feedback" id="quizFeedback" aria-live="polite"></div>
+        <button class="text-button hidden" id="nextQuestion">Next question →</button>
+      </div>
+    </section>
+
+    <section class="section reveal" id="secret">
+      <div class="section-kicker">04 / TOP-SECRET AREA</div>
+      <div class="secret-panel">
+        <div class="lock-icon">🔐</div>
+        <h2>Only the birthday girl gets in.</h2>
+        <p class="muted">A tiny secret door. You know the code… don't you?</p>
+        <form id="codeForm" class="code-form">
+          <label class="sr-only" for="secretCode">Enter secret code</label>
+          <input id="secretCode" type="password" placeholder="Enter the secret code" autocomplete="off" required>
+          <button class="primary-button" type="submit">Unlock ♡</button>
+        </form>
+        <p class="form-message" id="codeMessage" aria-live="polite"></p>
+        <div class="unlocked-message hidden" id="unlockedMessage">
+          <div class="unlocked-emoji">🎉💌</div>
+          <h3>YOU DID IT, SREYA!</h3>
+          <p>Officially verified: birthday girl status = 100% iconic.</p>
+          <p class="tiny">Your next mission: open the gift below. No pressure. Okay, a little pressure. 😌</p>
+        </div>
+      </div>
+      <p class="micro-copy">Just a playful puzzle, not real security — the code is stored in the page's JavaScript.</p>
+    </section>
+
+    <section class="section reveal" id="gift">
+      <div class="section-kicker">05 / YOUR SURPRISE GIFT</div>
+      <div class="gift-section">
+        <div class="gift-art" id="giftArt" role="button" tabindex="0" aria-label="Open the birthday gift">
+          <div class="gift-glow"></div><div class="gift-box"><div class="gift-lid"><div class="bow"></div></div><div class="gift-ribbon"></div><div class="gift-front-heart">♡</div></div>
+          <span class="gift-spark spark-one">✦</span><span class="gift-spark spark-two">✧</span><span class="gift-spark spark-three">✷</span>
+        </div>
+        <h2 id="giftTitle">A little something for you…</h2>
+        <p class="muted" id="giftDescription">Tap the gift. Go on. It won't bite. Probably. 🎁</p>
+        <button class="primary-button" id="openGift">Open your gift</button>
+        <div class="gift-reveal hidden" id="giftReveal">
+          <span class="big-emoji">💐</span>
+          <h3>Your gift is a whole year of good things.</h3>
+          <p>More reasons to laugh, more little adventures, people who appreciate you, dreams that come closer, and days that remind you how wonderful life can be.</p>
+          <div class="coupon">BIRTHDAY COUPON <strong>One free treat from your friend 🍰</strong><small>Redeemable with a smile. Terms: absolutely no sharing the last bite required.</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="letter">
+      <div class="section-kicker">06 / OPEN WHEN YOU'RE READY</div>
+      <div class="letter-wrap">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open your birthday letter">
+          <div class="envelope-back"></div><div class="letter-paper"><span>Dear Sreya,</span><p>You deserve a year full of tiny joys and big wins…</p><small>with love & friendship ♡</small></div><div class="envelope-flap"></div><div class="envelope-seal">♡</div>
+        </div>
+        <button class="text-button" id="openLetter">Open your letter ✉</button>
+        <article class="full-letter hidden" id="fullLetter">
+          <h2>Dear Sreya, 💗</h2>
+          <p>Happy birthday! I hope this new chapter brings you peaceful days, unexpected happiness, lots of laughter, and the courage to go after everything you dream about.</p>
+          <p>Keep being your own wonderfully unique self. I hope you always have people around you who make you feel valued, supported, and free to be silly. May the little things make you smile and the big things work out in your favour.</p>
+          <p>Thank you for being a lovely friend. This website is just a small reminder that you deserve to feel celebrated — today and all year long.</p>
+          <p class="letter-end">Have the happiest birthday, Sreya! 🌷✨</p>
+          <p class="note-signature">Your friend ♡</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="final-section reveal" id="final">
+      <div class="final-stars">✦　✧　♡　✧　✦</div>
+      <p class="section-kicker">THE LAST LITTLE THING</p>
+      <h2>Make a wish, <em>Sreya.</em></h2>
+      <p>Close your eyes for a second. Think of something lovely. Ready?</p>
+      <button class="primary-button" id="wishButton">Send my wish into the universe ✨</button>
+      <p class="wish-result" id="wishResult" aria-live="polite"></p>
+      <div class="final-signoff">Made especially for you <span>♡</span></div>
+    </section>
+  </main>
+
+  <footer><span>made with ♡ for Sreya</span><span>birthday edition · <span id="year"></span></span></footer>
+  <audio id="birthdayAudio" loop preload="none">
+    <!-- Add a licensed/royalty-free MP3 as music.mp3 in the root folder to enable music. -->
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+  <script src="script.js"></script>
+</body>
+</html>
